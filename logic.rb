@@ -15,9 +15,8 @@ def answer
 end
 
 def question
-  quests = []
-  quests << File.readlines(@file_path + '/text/questions.txt', :encoding => 'UTF-8')
-  quests.flatten.sample
+  quests = File.readlines(@file_path + '/text/questions.txt', :encoding => 'UTF-8')
+  quests.sample
 end
 
 def cls
